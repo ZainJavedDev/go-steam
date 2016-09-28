@@ -15,7 +15,9 @@ var _ = math.Inf
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the proto package protobuf is being compiled against.
-const _ = proto.ProtoPackageIsVersion1
+// A compilation error at this line likely means your copy of the
+// proto package protobuf to be updated.
+const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type EGCSystemMsg int32
 
@@ -480,6 +482,8 @@ func init() {
 	proto.RegisterEnum("EGCBaseClientMsg", EGCBaseClientMsg_name, EGCBaseClientMsg_value)
 	proto.RegisterEnum("EGCToGCMsg", EGCToGCMsg_name, EGCToGCMsg_value)
 }
+
+func init() { proto.RegisterFile("gcsystemmsgs.proto", system_fileDescriptor0) }
 
 var system_fileDescriptor0 = []byte{
 	// 1475 bytes of a gzipped FileDescriptorProto

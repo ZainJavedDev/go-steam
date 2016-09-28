@@ -48,7 +48,7 @@ Whether you want to develop your own Steam bot or directly work on go-steam itse
 To update go-steam to a new version of SteamKit, do the following:
 
 	go get github.com/golang/protobuf/protoc-gen-go/
-    git submodule init && git submodule update
+    git submodule update --init --recursive
     cd generator
     go run generator.go clean proto steamlang
 
