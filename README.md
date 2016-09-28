@@ -62,3 +62,4 @@ Apply the protocol changes where necessary.
 ## License
 
 Steam for Go is licensed under the New BSD License. More information can be found in LICENSE.txt.
+
