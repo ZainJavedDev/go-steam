@@ -99,8 +99,11 @@ var clientProtoFiles = map[string]string{
 	"steammessages_base.proto":   "base.pb.go",
 	"encrypted_app_ticket.proto": "app_ticket.pb.go",
 
-	"steammessages_clientserver.proto":   "client_server.pb.go",
-	"steammessages_clientserver_2.proto": "client_server_2.pb.go",
+	"steammessages_clientserver.proto":         "client_server.pb.go",
+	"steammessages_clientserver_2.proto":       "client_server_2.pb.go",
+	"steammessages_clientserver_friends.proto": "client_server_friends.pb.go",
+	"steammessages_clientserver_login.proto":   "client_server_login.pb.go",
+	"steammessages_sitelicenseclient.proto":    "client_site_license.pb.go",
 
 	"content_manifest.proto": "content_manifest.pb.go",
 
@@ -125,13 +128,10 @@ var tf2ProtoFiles = map[string]string{
 }
 
 var dotaProtoFiles = map[string]string{
-	"base_gcmessages.proto":                "base.pb.go",
-	"econ_gcmessages.proto":                "econ.pb.go",
-	"gcsdk_gcmessages.proto":               "gcsdk.pb.go",
-	"dota_gcmessages_common.proto":         "dota_common.pb.go",
-	"dota_gcmessages_client.proto":         "dota_client.pb.go",
-	"dota_gcmessages_client_fantasy.proto": "dota_client_fantasy.pb.go",
-	"gcsystemmsgs.proto":                   "system.pb.go",
+	"base_gcmessages.proto":  "base.pb.go",
+	"econ_gcmessages.proto":  "econ.pb.go",
+	"gcsdk_gcmessages.proto": "gcsdk.pb.go",
+	"gcsystemmsgs.proto":     "system.pb.go",
 }
 
 func compileProto(srcBase, srcSubdir, proto, target string) {
