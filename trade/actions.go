@@ -1,8 +1,8 @@
 package trade
 
 import (
-	"github.com/faceit/go-steam/economy/inventory"
-	"github.com/faceit/go-steam/trade/tradeapi"
+	"github.com/paralin/go-steam/economy/inventory"
+	"github.com/paralin/go-steam/trade/tradeapi"
 	"time"
 )
 

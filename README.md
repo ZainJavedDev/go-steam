@@ -19,25 +19,25 @@ Some of the currently implemented features:
 
 If this is useful to you, there's also the [go-steamapi](https://github.com/Philipp15b/go-steamapi) package that wraps some of the official Steam Web API's types.
 
-This package was originally authored by [Philipp15b](https://github.com/Philipp15b/go-steam) and was forked/adopted by FACEIT.
+This package was originally authored by [Philipp15b](https://github.com/Philipp15b/go-steam).
 
 ## Installation
 
-    go get github.com/faceit/go-steam
+    go get github.com/paralin/go-steam
 
 ## Usage
 
 You can view the documentation with the [`godoc`](http://golang.org/cmd/godoc) tool or
-[online on godoc.org](http://godoc.org/github.com/faceit/go-steam).
+[online on godoc.org](http://godoc.org/github.com/paralin/go-steam).
 
 You should also take a look at the following sub-packages:
 
-  * [`gsbot`](http://godoc.org/github.com/faceit/go-steam/gsbot) utilites that make writing bots easier
-  * [example bot](http://godoc.org/github.com/faceit/go-steam/gsbot/gsbot) and [its source code](https://github.com/faceit/go-steam/blob/master/gsbot/gsbot/gsbot.go)
-  * [`trade`](http://godoc.org/github.com/faceit/go-steam/trade) for trading
-  * [`tradeoffer`](http://godoc.org/github.com/faceit/go-steam/tradeoffer) for trade offers
-  * [`economy/inventory`](http://godoc.org/github.com/faceit/go-steam/economy/inventory) for inventories
-  * [`tf2`](http://godoc.org/github.com/faceit/go-steam/tf2) for Team Fortress 2 related things
+  * [`gsbot`](http://godoc.org/github.com/paralin/go-steam/gsbot) utilites that make writing bots easier
+  * [example bot](http://godoc.org/github.com/paralin/go-steam/gsbot/gsbot) and [its source code](https://github.com/paralin/go-steam/blob/master/gsbot/gsbot/gsbot.go)
+  * [`trade`](http://godoc.org/github.com/paralin/go-steam/trade) for trading
+  * [`tradeoffer`](http://godoc.org/github.com/paralin/go-steam/tradeoffer) for trade offers
+  * [`economy/inventory`](http://godoc.org/github.com/paralin/go-steam/economy/inventory) for inventories
+  * [`tf2`](http://godoc.org/github.com/paralin/go-steam/tf2) for Team Fortress 2 related things
 
 ## Working with go-steam
 

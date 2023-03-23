@@ -13,12 +13,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/faceit/go-steam/cryptoutil"
-	"github.com/faceit/go-steam/netutil"
-	. "github.com/faceit/go-steam/protocol"
-	. "github.com/faceit/go-steam/protocol/protobuf"
-	. "github.com/faceit/go-steam/protocol/steamlang"
-	"github.com/faceit/go-steam/steamid"
+	"github.com/paralin/go-steam/cryptoutil"
+	"github.com/paralin/go-steam/netutil"
+	. "github.com/paralin/go-steam/protocol"
+	. "github.com/paralin/go-steam/protocol/protobuf"
+	. "github.com/paralin/go-steam/protocol/steamlang"
+	"github.com/paralin/go-steam/steamid"
 )
 
 // Represents a client to the Steam network.

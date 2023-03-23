@@ -1,9 +1,9 @@
 package steam
 
 import (
-	. "github.com/faceit/go-steam/protocol"
-	. "github.com/faceit/go-steam/protocol/protobuf"
-	. "github.com/faceit/go-steam/protocol/steamlang"
+	. "github.com/paralin/go-steam/protocol"
+	. "github.com/paralin/go-steam/protocol/protobuf"
+	. "github.com/paralin/go-steam/protocol/steamlang"
 	"github.com/golang/protobuf/proto"
 )
 
