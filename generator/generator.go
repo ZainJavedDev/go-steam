@@ -48,7 +48,7 @@ func clean() {
 	print("# Cleaning")
 	cleanGlob("../protocol/**/*.pb.go")
 	cleanGlob("../tf2/protocol/**/*.pb.go")
-	cleanGlob("../dota/protocol/**/*.pb.go")
+	// cleanGlob("../dota/protocol/**/*.pb.go")
 
 	os.Remove("../protocol/steamlang/enums.go")
 	os.Remove("../protocol/steamlang/messages.go")
@@ -81,7 +81,7 @@ func buildProto() {
 
 	buildProtoMap("steamclient", clientProtoFiles, "../protocol/protobuf")
 	buildProtoMap("tf", tf2ProtoFiles, "../tf2/protocol/protobuf")
-	buildProtoMap("dota", dotaProtoFiles, "../dota/protocol/protobuf")
+	// buildProtoMap("dota", dotaProtoFiles, "../dota/protocol/protobuf")
 }
 
 func buildProtoMap(srcSubdir string, files map[string]string, outDir string) {
@@ -127,12 +127,14 @@ var tf2ProtoFiles = map[string]string{
 	"gcsystemmsgs.proto":     "system.pb.go",
 }
 
+/*
 var dotaProtoFiles = map[string]string{
 	"base_gcmessages.proto":  "base.pb.go",
 	"econ_gcmessages.proto":  "econ.pb.go",
 	"gcsdk_gcmessages.proto": "gcsdk.pb.go",
 	"gcsystemmsgs.proto":     "system.pb.go",
 }
+*/
 
 func compileProto(srcBase, srcSubdir, proto, target string) {
 	outDir, _ := filepath.Split(target)
