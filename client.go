@@ -146,7 +146,6 @@ func (c *Client) Connect() *netutil.PortAddr {
 }
 
 // Connects to a specific server.
-// You may want to use one of the `GetRandom*CM()` functions in this package.
 // If this client is already connected, it is disconnected first.
 func (c *Client) ConnectTo(addr *netutil.PortAddr) {
 	c.ConnectToBind(addr, nil)

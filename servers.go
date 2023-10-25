@@ -7,7 +7,7 @@ import (
 	"github.com/paralin/go-steam/netutil"
 )
 
-// CMServers contains a list of worlwide servers
+// CMServers contains a list of worldwide servers
 var CMServers = []string{
 	"155.133.248.52:27018",
 	"162.254.197.40:27018",
@@ -111,35 +111,11 @@ var CMServers = []string{
 	"162.254.193.46:27018",
 }
 
-	
-	
-	
-
 // GetRandomCM returns back a random server anywhere
 func GetRandomCM() *netutil.PortAddr {
 	rng := rand.New(rand.NewSource(time.Now().UnixNano()))
-	servers := append(CMServers[0], CMServers[1]...)
+	servers := CMServers
 	addr := netutil.ParsePortAddr(servers[rng.Int31n(int32(len(servers)))])
-	if addr == nil {
-		panic("invalid address in CMServers slice")
-	}
-	return addr
-}
-
-// GetRandomNorthAmericaCM returns back a random server in north america
-func GetRandomNorthAmericaCM() *netutil.PortAddr {
-	rng := rand.New(rand.NewSource(time.Now().UnixNano()))
-	addr := netutil.ParsePortAddr(CMServers[0][rng.Int31n(int32(len(CMServers[0])))])
-	if addr == nil {
-		panic("invalid address in CMServers slice")
-	}
-	return addr
-}
-
-// GetRandomEuropeCM returns back a random server in europe
-func GetRandomEuropeCM() *netutil.PortAddr {
-	rng := rand.New(rand.NewSource(time.Now().UnixNano()))
-	addr := netutil.ParsePortAddr(CMServers[1][rng.Int31n(int32(len(CMServers[1])))])
 	if addr == nil {
 		panic("invalid address in CMServers slice")
 	}
