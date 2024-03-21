@@ -11,6 +11,7 @@ import (
 
 	"github.com/paralin/go-steam/cryptoutil"
 	. "github.com/paralin/go-steam/protocol"
+	"golang.org/x/net/proxy"
 )
 
 type connection interface {
@@ -30,13 +31,31 @@ type tcpConnection struct {
 }
 
 func dialTCP(laddr, raddr *net.TCPAddr) (*tcpConnection, error) {
-	conn, err := net.DialTCP("tcp", laddr, raddr)
+	// Create a dialer
+	httpProxy := "address:port"
+
+	auth := &proxy.Auth{
+		User:     "username",
+		Password: "password",
+	}
+
+	dialer, err := proxy.SOCKS5("tcp", httpProxy, auth, proxy.Direct)
 	if err != nil {
 		return nil, err
 	}
 
+	conn, err := dialer.Dial("tcp", raddr.String())
+	if err != nil {
+		return nil, err
+	}
+
+	tcpConn, ok := conn.(*net.TCPConn)
+	if !ok {
+		return nil, fmt.Errorf("failed to cast connection to *net.TCPConn")
+	}
+
 	return &tcpConnection{
-		conn: conn,
+		conn: tcpConn,
 	}, nil
 }
 
