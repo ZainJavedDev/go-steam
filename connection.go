@@ -39,7 +39,11 @@ func dialTCP(laddr, raddr *net.TCPAddr) (*tcpConnection, error) {
 		Password: "password",
 	}
 
-	dialer, err := proxy.SOCKS5("tcp", httpProxy, auth, proxy.Direct)
+	forwardDialer := &net.Dialer{
+		LocalAddr: laddr,
+	}
+
+	dialer, err := proxy.SOCKS5("tcp", httpProxy, auth, forwardDialer)
 	if err != nil {
 		return nil, err
 	}
